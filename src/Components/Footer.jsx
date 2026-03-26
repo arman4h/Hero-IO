@@ -11,32 +11,31 @@ export default function Footer() {
             <h2 className="text-xl font-semibold">Hero Apps</h2>
           </div>
           <p className="text-gray-300 text-sm text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            esse autem at, laudantium dolores eaque expedita quidem eveniet,
-            mollitia officiis aut porro harum minus distinctio ab ducimus labore
-            laborum repellendus!
+            HERO.IO builds practical mobile apps that help people stay productive,
+            organized, and connected. We focus on clean design, useful features,
+            and reliable performance for everyday use.
           </p>
         </div>
 
         <div className="col-span-full md:col-span-6 lg:col-span-2 space-y-5">
-          <h2 className=" font-semibold">About Hero Apps</h2>
+          <h2 className=" font-semibold">Company</h2>
           <ul className="text-gray-400 space-y-2">
-            <li>Newsroom</li>
-            <li>Leadership</li>
-            <li>Lorem, ipsum.</li>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Newsroom</li>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Press</li>
+            <li>Contact</li>
+            <li>Support</li>
           </ul>
         </div>
 
         <div className="col-span-full md:col-span-6 lg:col-span-2 space-y-5">
-          <h2 className=" font-semibold">About Hero Apps</h2>
+          <h2 className=" font-semibold">Resources</h2>
           <ul className="text-gray-400 space-y-2">
-            <li>Newsroom</li>
-            <li>Leadership</li>
-            <li>Lorem, ipsum.</li>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Newsroom</li>
+            <li>Documentation</li>
+            <li>Developer API</li>
+            <li>Community</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
           </ul>
         </div>
 
