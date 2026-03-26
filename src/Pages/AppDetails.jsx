@@ -12,6 +12,7 @@ import {
   YAxis,
 } from "recharts";
 import { useAppContext } from "../context/AppContext";
+import appErrorImage from "../assets/App-Error.png";
 
 export default function AppDetails() {
   const { id } = useParams();
@@ -19,19 +20,25 @@ export default function AppDetails() {
   const app = useMemo(() => apps.find((item) => item.id === Number(id)), [apps, id]);
   const [isClickingInstall, setIsClickingInstall] = useState(false);
   const installed = isInstalled(id);
-  const chartData = [...app.ratings].reverse();
 
   if (!app) {
     return (
-      <section className="w-11/12 mx-auto py-16 text-center">
-        <h1 className="text-4xl font-bold">App Not Found</h1>
-        <p className="text-gray-500 mt-3">The app details you are looking for are unavailable.</p>
-        <Link to="/apps" className="btn btn-primary mt-6">
-          Back to Apps
-        </Link>
+      <section className="min-h-[70vh] bg-base-200 flex items-center justify-center px-4 py-10">
+        <div className="text-center max-w-2xl w-full">
+          <img src={appErrorImage} alt="App not found" className="w-full max-w-sm mx-auto mb-5" />
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-3">OPPS!! APP NOT FOUND</h1>
+          <p className="text-gray-500 mb-6">
+            The App you are requesting is not found on our system. please try another apps
+          </p>
+          <Link to="/apps" className="btn btn-primary px-10">
+            Go Back!
+          </Link>
+        </div>
       </section>
     );
   }
+
+  const chartData = [...app.ratings].reverse();
 
   const handleInstall = () => {
     setIsClickingInstall(true);

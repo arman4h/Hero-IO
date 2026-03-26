@@ -3,21 +3,21 @@ import logo from "../assets/logo.png"
 
 export default function Footer() {
   return (
-    <footer className="footer sm:footer-horizontal bg-[#001931] items-center py-10">
-      <div className="w-11/12 mx-auto grid-cols-12 grid gap-10 text-white">
-        <div className="col-span-full md:col-span-6  lg:col-span-4 space-y-5 ">
-          <div className="flex items-center gap-1">
+    <footer className="bg-[#001931] py-10">
+      <div className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 text-white">
+        <div className="sm:col-span-2 lg:col-span-4 space-y-4">
+          <div className="flex items-center justify-center sm:justify-start gap-1">
             <img alt="" className="w-8" src={logo} />
             <h2 className="text-xl font-semibold">Hero Apps</h2>
           </div>
-          <p className="text-gray-300 text-sm text-justify">
+          <p className="text-gray-300 text-sm leading-6 text-center sm:text-left">
             HERO.IO builds practical mobile apps that help people stay productive,
             organized, and connected. We focus on clean design, useful features,
             and reliable performance for everyday use.
           </p>
         </div>
 
-        <div className="col-span-full md:col-span-6 lg:col-span-2 space-y-5">
+        <div className="lg:col-span-2 space-y-4 text-center sm:text-left">
           <h2 className=" font-semibold">Company</h2>
           <ul className="text-gray-400 space-y-2">
             <li>About Us</li>
@@ -28,7 +28,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="col-span-full md:col-span-6 lg:col-span-2 space-y-5">
+        <div className="lg:col-span-2 space-y-4 text-center sm:text-left">
           <h2 className=" font-semibold">Resources</h2>
           <ul className="text-gray-400 space-y-2">
             <li>Documentation</li>
@@ -39,9 +39,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="col-span-full md:col-span-6 lg:col-span-2 space-y-5">
+        <div className="lg:col-span-2 space-y-4 text-center sm:text-left">
           <h2 className=" font-semibold">Social Icons</h2>
-          <ul className="text-white flex gap-4 text-xl space-y-2">
+          <ul className="text-white flex justify-center sm:justify-start gap-4 text-xl">
             <li>
               <svg
                 stroke="currentColor"
