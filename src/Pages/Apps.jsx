@@ -27,8 +27,10 @@ export default function Apps() {
   return (
     <section className="w-11/12 mx-auto py-12">
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-bold">All Apps</h1>
-        <p className="text-gray-500">Browse, search, and discover the best apps from HERO.IO.</p>
+        <h1 className="text-3xl font-bold">Our All Applications</h1>
+        <p className="text-gray-500">
+          Explore All Apps on the Market developed by us. We code for Millions.
+        </p>
       </div>
 
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">

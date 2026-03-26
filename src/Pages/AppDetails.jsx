@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import {
   Bar,
   BarChart,
-  CartesianGrid,
+  Legend,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -19,6 +19,7 @@ export default function AppDetails() {
   const app = useMemo(() => apps.find((item) => item.id === Number(id)), [apps, id]);
   const [isClickingInstall, setIsClickingInstall] = useState(false);
   const installed = isInstalled(id);
+  const chartData = [...app.ratings].reverse();
 
   if (!app) {
     return (
@@ -73,16 +74,20 @@ export default function AppDetails() {
         </div>
       </div>
 
-      <div className="bg-base-100 p-5 rounded-md border border-base-300">
-        <h2 className="text-2xl font-bold mb-4">App Review Chart</h2>
-        <div className="w-full h-80">
+      <div className="bg-base-200 p-5 rounded-md">
+        <h2 className="text-3xl font-bold mb-4">Ratings</h2>
+        <div className="w-full h-96">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={app.ratings} margin={{ top: 10, right: 20, left: 0, bottom: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
+            <BarChart
+              layout="vertical"
+              data={chartData}
+              margin={{ top: 10, right: 30, left: 10, bottom: 10 }}
+            >
+              <XAxis type="number" tickLine={false} axisLine={true} />
+              <YAxis dataKey="name" type="category" tickLine={false} axisLine={true} width={70} />
               <Tooltip />
-              <Bar dataKey="count" fill="#7c3aed" radius={[6, 6, 0, 0]} />
+              <Legend verticalAlign="bottom" iconType="square" />
+              <Bar dataKey="count" fill="#10b981" barSize={26} radius={[0, 4, 4, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
